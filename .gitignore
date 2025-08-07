@@ -1,0 +1,33 @@
+# Fichiers et dossiers à ignorer
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dossiers de cache
+.cache/
+.temp/
+.tmp/
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+*~
+
+# Logs
+*.log
+logs/
+
+# Dossiers node_modules (si vous utilisez Node.js)
+node_modules/
+
+# Fichiers de configuration locaux
+.env
+.env.local
+config.local.json
+.vscode/
+
+# Dossiers de build/dist
+dist/
+build/
