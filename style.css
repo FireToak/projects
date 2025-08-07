@@ -1,0 +1,208 @@
+/* Styles globaux */
+* {
+    box-sizing: border-box; /* Inclure la bordure et le padding dans la largeur totale */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden; /* Empêcher le débordement horizontal */
+    outline: 1px solid red !important; /* Pour le débogage*/
+}
+
+body {
+    background: linear-gradient(to bottom right, #1b263b, #1b263bc9);
+    color: white;
+}
+
+hr {
+    color: aqua;
+}
+
+header {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.message-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000; /* Assurez-vous que le message est au-dessus des autres éléments */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.message-top p {
+    margin: 0;
+    flex-grow: 1; /* Permet au texte de prendre tout l'espace disponible */
+}
+
+.message-top a {
+    color: #FF8F00; /* Couleur du lien */
+    margin-left: 10px; /* Espace entre le texte et le lien */
+    text-decoration: underline; /* Souligner le lien */
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: min(3rem, 10vw);
+}
+
+header span {
+    color: #FF8F00;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+header hr {
+    width: min(200px, 50%);
+    margin: 0 0 0 0;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #00BFA6;
+    border: none;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.arrow-down {
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+.title-h2 h2 {
+    display: flex;
+    justify-content: center;
+    font-size: min(1.5rem, 10vw);
+}
+
+.title-hr {
+    width: min(200px, 20vw);
+    height: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #00BFA6;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.title-container hr {
+    margin: 33px 12px; /* vertical | horizontal */
+}
+
+.orange {
+    background-color: #FF8F00;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 0 100px 0; /* top | right | bottom | left */
+    gap: 60px; /* Espace entre les éléments */
+}
+
+.project-item {
+    background-color: #333;
+    border: 1px solid #ffffff2c;
+    border-radius: 10px;
+    max-width: 360px;
+    min-width: 360px;
+    min-height: 360px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-item:hover {
+    transform: translateY(-3px); /* effet de survol */
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.11);
+}
+
+.project-item img {
+    width: 360px; /* largeur de l'image */
+    height: auto; /* hauteur de l'image auto */
+    aspect-ratio: 16 / 9; /* ratio de l'image */
+    object-fit: cover; /* couvre toute la taille de la zone et évite les étirements */
+}
+
+.project-item h3 {
+    color: #ffffff;
+    font-size: min(1.5rem, 10vw);
+    margin: 15px 15px 5px 15px; /* top | right | bottom | left */
+}
+
+.project-item p {
+    color: #ffffffc2;
+    text-align: start;
+    margin: -2px 15px 15px 15px; /* top | right | bottom | left */
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.project-item a {
+    margin: 0 0 0 15px; /* top | right | bottom | left */
+    padding: 2px;
+    color: #74a0f1;
+    margin-bottom: 15px;
+}
+
+.project-item progress {
+    width: 70%;
+    align-self: center;
+    font-size: 15px;
+    background-color: #ffffff8a;
+    border-radius: 10px;
+    margin: 20px 0 20px 0; /* top | right | bottom | left */
+}
+
+.project-item progress::-moz-progress-bar { /* Firefox */
+    background-color: #ffffff;     
+    border-radius: 10px;
+}
+
+.project-item progress::-webkit-progress-value {
+    background-color: #ffffff;     /* Couleur du trait */
+    border-radius: 10px;
+}
+
+.project-item h4 {
+    color: #ffffff;
+    margin: 10px 0 -7px 52px; /* top | right | bottom | left */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
