@@ -10,6 +10,7 @@
 body {
     background: linear-gradient(to bottom right, #1b263b, #1b263bc9);
     color: white;
+    margin: 0;
 }
 
 hr {
@@ -56,7 +57,7 @@ header h1 {
     font-size: min(3rem, 10vw);
 }
 
-header span {
+.span-project {
     color: #FF8F00;
 }
 
@@ -88,12 +89,6 @@ header hr {
     color: #333;
     cursor: pointer;
     animation: bounce 2s infinite;
-}
-
-.title-h2 h2 {
-    display: flex;
-    justify-content: center;
-    font-size: min(1.5rem, 10vw);
 }
 
 .title-hr {
@@ -168,6 +163,7 @@ header hr {
 .project-item a:hover {
     text-decoration: underline;
     cursor: pointer;
+    color: #00BFA6;
 }
 
 .project-item a {
@@ -201,8 +197,70 @@ header hr {
     margin: 10px 0 -7px 52px; /* top | right | bottom | left */
 }
 
+footer {
+    background-color: #333;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.164);
+}
+
+footer hr {
+    margin: 0 auto;
+    padding: 0 30px 0 30px;
+    max-width: 1500px;
+    width: 94%;
+    color: #ffffff67;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 30px 30px 0 30px; /* top | right | bottom | left */
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-top ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Espace entre les éléments */
+    padding: 0;
+    list-style: none; /* Supprimer les puces */
+}
+
+.footer-top li a {
+    color: #ffffffc5;
+}
+
+.footer-top a:hover {
+    color: #00BFA6;
+}
+
+.footer-bottom {
+    padding: 10px 0;
+    color: #ffffffce;
+    margin: 0 auto;
+}
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
     40% { transform: translateY(-10px); }
     60% { transform: translateY(-5px); }
+}
+
+@media (max-width: 768px) {
+
+    .title-container hr {
+        margin: 33px 12px; /* vertical | horizontal */
+        width: 65px;
+    }
+
+    .footer-top ul {
+        flex-direction: column; /* Passer en colonne pour les petits écrans */
+        align-items: center; /* Centrer les éléments */
+    }
 }
