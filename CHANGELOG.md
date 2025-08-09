@@ -30,4 +30,12 @@ Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/)
 
 #### Note prochaine mise à jour
 - Création de visuel pour les projets en cours.
-- Mettre en place des limites d'affiches pour les project-item pour toujours garder le contenu au centre même sur les grands écran.
+
+## [1.0.0] - 09/08/2025
+
+### Ajouté 
+- Numéro de version dans le footer.
+- Illustration pour le projet Eliot bot
+
+### Modifié
+- Les élements "en savoir plus" et "porgress bar" sont désormais pousser en bas des conteneurs.

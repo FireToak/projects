@@ -26,31 +26,6 @@ header {
     padding: 50px 0;
 }
 
-.message-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 1000; /* Assurez-vous que le message est au-dessus des autres éléments */
-    display: flex;
-    justify-content: flex-start;
-}
-
-.message-top p {
-    margin: 0;
-    flex-grow: 1; /* Permet au texte de prendre tout l'espace disponible */
-}
-
-.message-top a {
-    color: #FF8F00; /* Couleur du lien */
-    margin-left: 10px; /* Espace entre le texte et le lien */
-    text-decoration: underline; /* Souligner le lien */
-}
-
 header h1 {
     margin: 0;
     text-align: center;
@@ -117,8 +92,10 @@ header hr {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 20px 0 100px 0; /* top | right | bottom | left */
+    margin: 0 auto; /* Centrer le conteneur */
+    padding: 20px 0 100px 0; /* top | right | bottom | left */
     gap: 60px; /* Espace entre les éléments */
+    max-width: 1500px; /* Largeur maximale du conteneur */
 }
 
 .project-item {
@@ -167,19 +144,22 @@ header hr {
 }
 
 .project-item a {
-    margin: 0 0 0 15px; /* top | right | bottom | left */
+    margin: auto 15px; 
     padding: 2px;
     color: #74a0f1;
     margin-bottom: 15px;
+
 }
 
 .project-item progress {
     width: 70%;
-    align-self: center;
-    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les deux éléments */
     background-color: #ffffff8a;
     border-radius: 10px;
-    margin: 20px 0 20px 0; /* top | right | bottom | left */
+    gap: 5px;
+    margin: -10px 10px 20px 50px; /* top | right | bottom | left */
 }
 
 .project-item progress::-moz-progress-bar { /* Firefox */
@@ -194,7 +174,7 @@ header hr {
 
 .project-item h4 {
     color: #ffffff;
-    margin: 10px 0 -7px 52px; /* top | right | bottom | left */
+    margin: auto 0 20px 52px; /* top | right | bottom | left */
 }
 
 footer {
@@ -236,14 +216,32 @@ footer hr {
     color: #ffffffc5;
 }
 
-.footer-top a:hover {
+footer a:hover {
     color: #00BFA6;
+    text-decoration: underline;
 }
 
 .footer-bottom {
     padding: 10px 0;
     color: #ffffffce;
     margin: 0 auto;
+}
+
+.footer-bottom p {
+    margin: 10px;
+}
+
+.footer-bottom hr {
+    margin-top: 20px;
+    width: 50px;
+    border: none;
+    height: 2px;
+    border-radius: 30px;
+    background-color: #ffffff46;
+}
+
+.footer-bottom a {
+    color: rgb(156, 156, 156);
 }
 
 @keyframes bounce {
